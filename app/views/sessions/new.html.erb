@@ -1,0 +1,19 @@
+<h1>チャットアプリ</h1>
+<p>ログインページ</p>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <div class="field">
+    <%= f.label :userid %>
+    <%= f.text_field :userid %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+<p><%= link_to "新規登録", new_user_path %></p>

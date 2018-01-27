@@ -1,0 +1,11 @@
+<h1>チャットアプリ</h1>
+
+<p>アカウント情報修正</p>
+
+<%= render 'form', user: @user %>
+
+<%= link_to '戻る', users_path %>
+<%= link_to 'ログアウト', logout_path, method: :delete %>
+<%= link_to 'Destroy', user_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+

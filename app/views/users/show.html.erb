@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>チャットアプリ</h1>
+
+<p>ログイン完了ページ</p>
+<p>
+  <strong>Userid:</strong>
+  <%= @user.userid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>以上のアカウントでログインしました！</p>
+
+<%= link_to 'アカウント情報修正', edit_user_path(@user) %> |
+<%= link_to 'Home', users_path %>
+<% if logged_in? %>
+  <%= link_to 'Logout', logout_path, method: :delete %>
+<% end %>
